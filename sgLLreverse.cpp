@@ -45,23 +45,18 @@ void disp()
    temp=temp->next;
  }
 }
-void add_after_first(int x)
-{
-    p=new node;
-    p->data=x;
-    p->next=first->next;
-    first->next=p;
-}
-void add_after_given(int x,int y)
-{
-  temp=first;
-  while(temp->data!=x)
-  temp=temp->next;
-  ttemp=new node;
-  ttemp->data=y;
-  ttemp->next=temp->next;
-  temp->next=ttemp;
 
+void reverse()
+{  
+    ttemp=null;
+    while (first != null)
+    {
+        temp = first;       // Current node
+        first = first->next; // Move head forward
+        temp->next = ttemp;  // Reverse pointer
+        ttemp = temp;        // Move prev forward
+    }
+    first = ttemp;       // Update head to new first
 }
 
 int main()
@@ -74,10 +69,7 @@ int main()
 	addnode(60);
 	disp();
     cout<<"\n";
-    add_after_first(40);
-    disp();
-    cout<<"\n";
-    add_after_given(30,90);
+    reverse();
     disp();
     
 }
