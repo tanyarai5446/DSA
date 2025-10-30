@@ -81,3 +81,45 @@ int main()
     disp();
     
 }
+/*#include<stdio.h>
+#include<stdlib.h>
+
+
+struct Node{
+    int data;
+    struct Node *next;
+};
+
+void linkedListtraversal(struct Node* ptr){
+    while(ptr!=NULL)
+    {
+        printf("Element : %d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+int main(){
+    struct Node *temp;
+    struct Node *ttemp;
+    struct Node *p;
+
+    // Allocate memory for the nodes in the linked list in Map
+    temp = (struct Node *)malloc(sizeof(struct Node));
+    ttemp = (struct Node *)malloc(sizeof(struct Node));
+    p = (struct Node *)malloc(sizeof(struct Node));
+
+    // link firt and secind node
+    temp->data = 7;
+    temp->next = ttemp;
+
+    // link second and third node
+    ttemp->data = 11;
+    ttemp->next = p;
+
+    // Terminate the list at the third node
+    p->data = 23;
+    p->next = NULL;
+
+    linkedListtraversal(temp);
+
+    return 0;
+}*/
