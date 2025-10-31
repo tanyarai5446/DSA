@@ -23,7 +23,7 @@ void addnode(int val)
   while(temp->next!=null)
   {
   temp=temp->next;
-
+  
   }
   ttemp=new node;
   ttemp->data=val;
