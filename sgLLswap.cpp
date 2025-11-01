@@ -92,19 +92,6 @@ void swapMN(int x,int y)
         ttemp->next=temp;
         temp->next=r;
  }
- /*else if(ttemp->next==temp)
- {
-        //y before x
-        s=ttemp->next;
-        // if y is not head
-        if(q!=null)
-            q->next=temp;
-        else
-            first = temp;
-
-        temp->next=ttemp;
-        ttemp->next=s;
- }*/
  else
  {
         //non adjacent case
