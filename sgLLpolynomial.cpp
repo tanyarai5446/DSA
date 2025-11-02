@@ -8,7 +8,7 @@ struct polynode
    int coef,pow;
    polynode *next;
 };
-polynode *first,*temp,*ttemp,*poly1,*poly2,*sum,*diff,*prod,*result,*a,*b;
+polynode *first,*temp,*ttemp,*poly1,*poly2,*sum,*diff,*prod,*a,*b;
 void init()
 {first=temp=ttemp=poly1=poly2=null; }
 void insertdata(polynode*& head, int coef, int pow) {
@@ -46,14 +46,14 @@ void disp(polynode* head)
 }
 polynode* addPoly(polynode*p1,polynode*p2)
 {
-   result=null;
+   polynode*result=null;
    while(p1||p2)
    {
     if(!p2||(p1&&p1->pow>p2->pow)){
     insertdata(result,p1->coef,p1->pow);
     p1=p1->next;
    }
-   else if(!p1&&(p2&&p2->pow>p1->pow)){
+   else if(!p1||(p2&&p2->pow>p1->pow)){
     insertdata(result,p2->coef,p2->pow);
     p2=p2->next;
    }
@@ -67,15 +67,15 @@ polynode* addPoly(polynode*p1,polynode*p2)
 }
 polynode* subPoly(polynode*p1,polynode*p2)
 {
-  result=null;
+  polynode*result=null;
   while(p1||p2)
   {
-    if(!p2&&(p1&&p1->pow>p2->pow))
+    if(!p2||(p1&&p1->pow>p2->pow))
     {
       insertdata(result,p1->coef,p1->pow);
       p1=p1->next;
    }
-   else if(!p1&&(p2&&p2->pow>p1->pow)){
+   else if(!p1||(p2&&p2->pow>p1->pow)){
       insertdata(result,-p2->coef,p2->pow);
       p2=p2->next;
    }
@@ -91,7 +91,7 @@ polynode* subPoly(polynode*p1,polynode*p2)
 
 polynode* mulPoly(polynode*p1,polynode*p2)
 {
-    result = null;
+   polynode* result = null;
     for ( a = p1; a != null; a = a->next) {
         for (b = p2; b != null; b = b->next) {
             int newCoef = a->coef * b->coef;
