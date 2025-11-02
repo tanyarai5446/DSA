@@ -109,7 +109,7 @@ int main()
     cout<<"enter no. of terms in poly1: ";
     cin>>n;
     cout<<"\nenter terms as coef and pow\n";
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
     cin >> coef >> pow;
     insertdata(poly1, coef, pow);
     }
@@ -118,7 +118,7 @@ int main()
     cout<<"enter no. of terms in poly2: ";
     cin>>n;
     cout<<"\nenter terms as coef and pow\n";
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
     cin >> coef >> pow;
     insertdata(poly2, coef, pow);
     }
