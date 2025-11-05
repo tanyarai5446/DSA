@@ -96,7 +96,7 @@ if (m > count || n > count) {
     mnode->next=nafter;
     nafter->prev=mnode;
     
-    if(mnode==head)head==nnode;
+    if(mnode==head)head=nnode;
  }
  else{
     node* mbefore = mnode->prev;
@@ -113,8 +113,8 @@ if (m > count || n > count) {
     swap(mnode->next,nnode->next);
     swap(mnode->prev,nnode->prev);
 
-    if(mnode==head)head==nnode;
-    else if(nnode==head)head==mnode;
+    if(mnode==head)head=nnode;
+    else if(nnode==head)head=mnode;
  }
 }
 void disp()
