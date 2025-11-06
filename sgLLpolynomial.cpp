@@ -11,10 +11,15 @@ struct polynode
 polynode *first,*temp,*ttemp,*poly1,*poly2,*sum,*diff,*prod,*a,*b;
 void init()
 {first=temp=ttemp=poly1=poly2=null; }
-void insertdata(polynode*& head, int coef, int pow) {
+void insertdata(polynode*& head, int coef, int pow) 
+{
+    // Skip inserting zero coefficient terms
+    if (coef == 0) return;
+
     ttemp = new polynode{coef, pow, nullptr};
 
-    if (!head || pow > head->pow) {//if head==null i.e. emty list or inserted pow is > head->pow
+    // Insert at head if list empty or new pow is greater than head pow (descending order)
+    if (!head || pow > head->pow) {
         ttemp->next = head;
         head = ttemp;
         return;
@@ -22,13 +27,32 @@ void insertdata(polynode*& head, int coef, int pow) {
 
     temp = head;
     while (temp) {
-        if (temp->pow == pow) { //when pow = 
+        // If same power, accumulate coefficient and delete new node
+        if (temp->pow == pow) {
             temp->coef += coef;
+            // If coefficient becomes zero, remove the node
+            if (temp->coef == 0) {
+                // remove head
+                if (temp == head) {
+                    polynode* toDel = head;
+                    head = head->next;
+                    delete toDel;
+                } else {
+                    // find previous to temp
+                    polynode* prev = head;
+                    while (prev && prev->next != temp) prev = prev->next;
+                    if (prev) {
+                        prev->next = temp->next;
+                        delete temp;
+                    }
+                }
+            }
+            delete ttemp;
             return;
         }
-        if (!temp->next || temp->next->pow < pow)//when pow small so find correct position untill temp->!=null 
-                                                 ////or temp jisko point krra uska next ka pow kam na ho given pow se
-            break;// it will break while as soon as we encounter a  pow < given pow and we will be at the position after which we have to insert now pow           
+
+        if (!temp->next || temp->next->pow < pow)
+            break;
         temp = temp->next;
     }
 
@@ -46,48 +70,52 @@ void disp(polynode* head)
 }
 polynode* addPoly(polynode*p1,polynode*p2)
 {
-   polynode*result=null;
-   while(p1||p2)
-   {
-    if(!p2||(p1&&p1->pow>p2->pow)){
-    insertdata(result,p1->coef,p1->pow);
-    p1=p1->next;
+   polynode* result = null;
+
+   // Merge-like safe approach: process while both non-null, then append remaining
+   while (p1 && p2) {
+       if (p1->pow > p2->pow) {
+           insertdata(result, p1->coef, p1->pow);
+           p1 = p1->next;
+       } else if (p2->pow > p1->pow) {
+           insertdata(result, p2->coef, p2->pow);
+           p2 = p2->next;
+       } else { // equal powers
+           insertdata(result, p1->coef + p2->coef, p1->pow);
+           p1 = p1->next;
+           p2 = p2->next;
+       }
    }
-   else if(!p1||(p2&&p2->pow>p1->pow)){
-    insertdata(result,p2->coef,p2->pow);
-    p2=p2->next;
-   }
-   else{
-    insertdata(result,p2->coef+p1->coef,p1->pow);
-    p1=p1->next;
-    p2=p2->next;
-   }
-   }
+
+   while (p1) { insertdata(result, p1->coef, p1->pow); p1 = p1->next; }
+   while (p2) { insertdata(result, p2->coef, p2->pow); p2 = p2->next; }
+
    return result;
 }
 polynode* subPoly(polynode*p1,polynode*p2)
 {
-  polynode*result=null;
-  while(p1||p2)
-  {
-    if(!p2||(p1&&p1->pow>p2->pow))
-    {
-      insertdata(result,p1->coef,p1->pow);
-      p1=p1->next;
-   }
-   else if(!p1||(p2&&p2->pow>p1->pow)){
-      insertdata(result,-p2->coef,p2->pow);
-      p2=p2->next;
-   }
-   else{
-      insertdata(result,p1->coef-p2->coef,p1->pow);
-      p1=p1->next;
-      p2=p2->next;
-   }
-   }
-   return result;
-    
+  polynode* result = null;
+
+  while (p1 && p2) {
+      if (p1->pow > p2->pow) {
+          insertdata(result, p1->coef, p1->pow);
+          p1 = p1->next;
+      } else if (p2->pow > p1->pow) {
+          insertdata(result, -p2->coef, p2->pow);
+          p2 = p2->next;
+      } else {
+          insertdata(result, p1->coef - p2->coef, p1->pow);
+          p1 = p1->next;
+          p2 = p2->next;
+      }
   }
+
+  while (p1) { insertdata(result, p1->coef, p1->pow); p1 = p1->next; }
+  while (p2) { insertdata(result, -p2->coef, p2->pow); p2 = p2->next; }
+
+  return result;
+
+}
 
 polynode* mulPoly(polynode*p1,polynode*p2)
 {
