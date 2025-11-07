@@ -21,7 +21,7 @@ void addnode()
 }
 void josephus(node*&head,int n,int k)
 {
-    temp=first;
+    temp=head;
     int size;
     for(int i=1;i<n;i++)
     {
@@ -38,7 +38,7 @@ void josephus(node*&head,int n,int k)
        temp=ttemp->next;
     }
     temp->next=temp;
-    first=temp;
+    head=temp;
 }
 void disp()
 {
