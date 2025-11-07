@@ -42,7 +42,7 @@ void josephus(node*&head,int n,int k)
     delete temp;
     temp=p;
   }
-  temp->next=temp;
+  //temp->next=temp; not necessary
   head = temp;
 }
 void disp()
