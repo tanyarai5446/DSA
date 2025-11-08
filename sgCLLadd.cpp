@@ -7,7 +7,7 @@ struct node
     int data;
     node* next;
 };
-node *first,*temp,*ttemp;
+node *first,*temp,*ttemp,*p,*q;
 void addnode()
 {  
    ttemp=new node;
@@ -35,30 +35,31 @@ void add_before_first(int x)
     ttemp->next=first;
     first=ttemp;
 }
-void del_last()
+void add_before_given(int x,int y)
 {
-    temp=first;
-    while(temp->next!=first)
-    {   
-        ttemp=temp;
-        temp=temp->next;
-    }
-    ttemp->next=first;
-    temp->next=null;
-    delete temp;
-    
+ temp=first;
+ ttemp=first;
+ while(temp->data!=x)
+ {
+    ttemp=temp;
+    temp=temp->next;
+ }
+ p=new node;
+ p->data=y;
+ if(temp==first)
+ {  q=first;
+    while(q->next!=first)
+    q=q->next;
+    p->next=temp;
+    q->next=p;
+    first=p;
+ }
+ else{
+    p->next=temp;
+    ttemp->next=p;
+ }
 }
-void del_first()
-{   ttemp=first;
-    temp=first->next;
-    while(ttemp->next!=first)
-{
-    ttemp=ttemp->next;
-}
-    ttemp->next=temp;
-    first->next=null;
-    first=temp;
-}
+
 
 void disp()
 {   
@@ -83,9 +84,7 @@ int main()
     add_before_first(5);
     disp();
     cout<<"\n";
-    del_last();
+    add_before_given(5,6);
     disp();
-    cout<<"\n";
-    del_first();
-    disp();
+    
 }
