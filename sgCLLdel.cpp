@@ -71,7 +71,6 @@ void delanyMth(int m)
   p=p->next;
   node*todelete=temp;
   node*after=todelete->next;
-  node*before=ttemp;
   if(todelete==first)
   {
     first=after;
