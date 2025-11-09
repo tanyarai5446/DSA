@@ -70,5 +70,4 @@ int main()
     cout<<popA()<<endl;
     cout<<popA()<<endl;
     cout<<popB()<<endl;
-    
 }
