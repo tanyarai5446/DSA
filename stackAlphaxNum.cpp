@@ -25,6 +25,7 @@ struct AN
         return data[top--];
     }
 };
+
 int getlength(char a[])
 {
     int i=0;
@@ -32,8 +33,10 @@ int getlength(char a[])
     i++;
     return i;
 }
+
 int main()
-{  AN s,s1,s2,s3;
+{  
+   AN s,s1,s2,s3;
    char a[100];
    fgets(a,100,stdin);
    int len=getlength(a);
@@ -63,5 +66,4 @@ int main()
    while(!s2.isempty()) cout << s2.pop();
    cout<<"\nrest characters: ";
    while(!s3.isempty()) cout<< s3.pop();
-
 }
