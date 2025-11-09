@@ -49,8 +49,7 @@ CLLstack* converttoCLL()
 }
 void displayCLL(CLLstack* head) {
     if (!head) return;
-
-     temp = head;
+    temp = head;
     do {
         cout << temp->data << " ";
         temp = temp->next;
@@ -60,16 +59,17 @@ void displayCLL(CLLstack* head) {
 int main()
 {  
      init();
-    for (int i = 1; i <= max; i++) {
+    for (int i = 1; i <= max; i++)
+    {
         push(i * 10); // Push 10, 20, ..., 70
     }
     cout << "Stack (top to bottom): ";
-    for (int i = top; i >= 0; i--) {
+    for (int i = top; i >= 0; i--)
+    {
     cout << stack[i] << " ";
-   }
+    }
     cout << endl;
     CLLstack* cllHead = converttoCLL();
     cout << "CLL (head to last): ";
     displayCLL(cllHead);
-
 }
