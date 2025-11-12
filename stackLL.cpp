@@ -28,7 +28,6 @@ int pop()
     temp->next=nullptr;
     delete temp;
     return y;
-
 }
 int main()
 {
