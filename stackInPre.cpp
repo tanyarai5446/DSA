@@ -109,7 +109,7 @@ int main()
         }
       }
      else if(a[i]=='+'||a[i]=='-')
-     { 
+      { 
        if(o1.data[o1.top]=='('||o1.top==-1)
        { 
          o1.push(a[i]);
@@ -140,7 +140,7 @@ int main()
        }
       }
       else if(a[i]==')')
-     {
+      {
       while(o1.data[o1.top]!='(')
       {
           arr[0]=o2.pop();
@@ -150,7 +150,7 @@ int main()
           o2.push(arr[3]);
       }
       o1.pop();
-     }
+      }
       i++;
     }
     while(o2.top!=-1)
