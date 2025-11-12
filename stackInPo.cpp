@@ -1,5 +1,6 @@
 // stack polish notation conversion infix to postfix
 #include<iostream>
+#include<cctype>
 using namespace std;
 struct inpo
 {
@@ -44,7 +45,7 @@ int main()
      {
          z.push(a[i]);
      }
-     else if((a[i]>='A'&&a[i]<='Z')||(a[i]>='a'&&a[i]<='z'))
+     else if(isalnum(a[i]))
      {
          str[j]=a[i];
          j++ ; 
