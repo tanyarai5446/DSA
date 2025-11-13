@@ -32,6 +32,24 @@ while(s[i]!='\0')
 i++;    
 return i;
 }
+int presi(char c)
+{
+  switch(c)
+  {
+    case '^':return 3;
+    case '*':return 2;
+    case '/':return 2;
+    case '+':return 1;
+    case '-':return 1;
+    default:return 0;
+  }
+
+}
+
+bool shouldpop(char top, char current) {
+    // Agar stack ka operator zyada powerful hai ya barabar hai, toh pop kar
+    return presi(top) >= presi(current);
+}
 int main()
 {
  inpo z;
@@ -50,54 +68,20 @@ int main()
          str[j]=a[i];
          j++ ; 
      }
-     else if(a[i]=='^')
-     {
-         z.push(a[i]);
-     }
-     else if(a[i]=='*'||a[i]=='/')
-     {
-       if(z.data[z.top]=='('||z.data[z.top]=='+'||z.data[z.top]=='-'||z.top==-1)
-       { 
-         z.push(a[i]);
-       }
-       else if(a[i]=='*'&& (z.data[z.top]=='^'||z.data[z.top]=='/'))
-       {
-         while(z.data[z.top]!='('&&z.data[z.top]!='+'&&z.data[z.top]!='-')
-         {str[j]=z.pop();j++;}
-         z.push(a[i]);
-       }
-       else if(a[i]=='/'&& (z.data[z.top]=='^'||z.data[z.top]=='*'))
-       {
-         while(z.data[z.top]!='('&&z.data[z.top]!='+'&&z.data[z.top]!='-')
-         {str[j]=z.pop();j++;}
-         z.push(a[i]);
-       }
-     }
-     else if(a[i]=='+'||a[i]=='-')
-     { 
-       if(z.data[z.top]=='('||z.top==-1)
-       { 
-         z.push(a[i]);
-       }
-       else if(a[i]=='+'&&(z.data[z.top]=='^'||z.data[z.top]=='*'||z.data[z.top]=='/'||z.data[z.top]=='-'))
-       {  
-         while(z.data[z.top]!='(')
-         {str[j]=z.pop();j++;}
-         z.push(a[i]);
-       }
-       else if(a[i]=='-'&& (z.data[z.top]=='^'||z.data[z.top]=='*'||z.data[z.top]=='/'||z.data[z.top]=='+'))
-       {
-         while(z.data[z.top]!='(')
-         {str[j]=z.pop();j++;}
-         z.push(a[i]);
-       }
+     else if(presi(a[i])>0)//agar operator mila
+     {  
+      //jab tak stack ka top greater ya equal hai pop krte jao
+      while(z.top!=-1&&z.data[z.top]!='('&&shouldpop(z.data[z.top],a[i]))
+      {
+        str[j++]=z.pop();
+      }
+         z.push(a[i]);//as we get operator greater than the top push
      }
      else if(a[i]==')')
      {
       while(z.data[z.top]!='(')
       {
-      str[j]=z.pop();
-      j++;
+      str[j++]=z.pop();
       }
       z.pop();
      }
@@ -107,6 +91,7 @@ int main()
     {
      str[j++] = z.pop();
     }
+    str[j] = '\0'; 
     int leng=getlength(str);
     for(int k=0;k<leng;k++)
     {
