@@ -13,7 +13,8 @@ void init()
     p->top=-1;
 }
 int rev(int num)
-{   //push opration
+{   
+    //push opration
     while(p->top<max&&num>0)
     {
         p->data[++p->top]=num%10;
@@ -28,7 +29,6 @@ int rev(int num)
         multiplier*=10;
     }
     return reverse;
-
 }
 int main()
 {
