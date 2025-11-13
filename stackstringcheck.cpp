@@ -53,7 +53,7 @@ int main()
   if (a[len - 1] == '\n') {
     a[len - 1] = '\0';
     len--;
-}
+  }
   stack s1;
   s1.init(len);
   for(int i=0;i<len;i++)
