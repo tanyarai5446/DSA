@@ -54,6 +54,23 @@ while(s[i]!='\0')
 i++;    
 return i;
 }
+int presi(char c)
+{
+  switch(c)
+  {
+    case '^':return 3;
+    case '*':return 2;
+    case '/':return 2;
+    case '+':return 1;
+    case '-':return 1;
+    default:return 0;
+  }
+
+}
+bool shouldpop(char top, char current) {
+    // Agar stack ka operator zyada powerful hai ya barabar hai, toh pop kar
+    return presi(top) >= presi(current);
+}
 int main()
 {
  opr o1 ;
@@ -73,72 +90,18 @@ int main()
      {
          o2.push(std::string(1,a[i]));
      }
-     else if(a[i]=='^')
-     {
+     else if(presi(a[i])>0)
+     {   
+        while(o1.top!=-1&&o1.data[o1.top]!='('&&shouldpop(o1.data[o1.top],a[i]))
+        {
+          arr[0]=o2.pop();
+          arr[1]=o2.pop();
+          arr[2]=o1.pop();
+          arr[3]=arr[2]+arr[1]+arr[0];
+          o2.push(arr[3]);
+        }
          o1.push(a[i]);
      }
-     else if(a[i]=='*'||a[i]=='/')
-     {
-       if(o1.data[o1.top]=='('||o1.data[o1.top]=='+'||o1.data[o1.top]=='-'||o1.top==-1)
-       { 
-         o1.push(a[i]);
-       }
-       else if(a[i]=='*'&& (o1.data[o1.top]=='^'||o1.data[o1.top]=='/'))
-       {
-         while(o1.data[o1.top]!='('&&o1.data[o1.top]!='+'&&o1.data[o1.top]!='-')
-         {
-          arr[0]=o2.pop();
-          arr[1]=o2.pop();
-          arr[2]=o1.pop();
-          arr[3]=arr[2]+arr[1]+arr[0];
-          o2.push(arr[3]);
-          }
-          o1.push(a[i]);
-       }
-       else if(a[i]=='/'&& (o1.data[o1.top]=='^'||o1.data[o1.top]=='*'))
-       {
-         while(o1.data[o1.top]!='('&&o1.data[o1.top]!='+'&&o1.data[o1.top]!='-')
-         {
-          arr[0]=o2.pop();
-          arr[1]=o2.pop();
-          arr[2]=o1.pop();
-          arr[3]=arr[2]+arr[1]+arr[0];
-          o2.push(arr[3]);
-         }
-         o1.push(a[i]);
-        }
-      }
-     else if(a[i]=='+'||a[i]=='-')
-      { 
-       if(o1.data[o1.top]=='('||o1.top==-1)
-       { 
-         o1.push(a[i]);
-       }
-       else if(a[i]=='+'&&(o1.data[o1.top]=='^'||o1.data[o1.top]=='*'||o1.data[o1.top]=='/'||o1.data[o1.top]=='-'))
-       {  
-         while(o1.data[o1.top]!='(')
-         {
-          arr[0]=o2.pop();
-          arr[1]=o2.pop();
-          arr[2]=o1.pop();
-          arr[3]=arr[2]+arr[1]+arr[0];
-          o2.push(arr[3]);
-         }
-         o1.push(a[i]);
-       }
-       else if(a[i]=='-'&& (o1.data[o1.top]=='^'||o1.data[o1.top]=='*'||o1.data[o1.top]=='/'||o1.data[o1.top]=='+'))
-       {
-         while(o1.data[o1.top]!='(')
-         {
-          arr[0]=o2.pop();
-          arr[1]=o2.pop();
-          arr[2]=o1.pop();
-          arr[3]=arr[2]+arr[1]+arr[0];
-          o2.push(arr[3]);
-         }
-         o1.push(a[i]);
-       }
-      }
       else if(a[i]==')')
       {
       while(o1.data[o1.top]!='(')
@@ -153,8 +116,15 @@ int main()
       }
       i++;
     }
-    while(o2.top!=-1)
+    while (o1.top != -1) {
+    arr[0] = o2.pop();
+    arr[1] = o2.pop();
+    arr[2] = o1.pop();
+    arr[3] = arr[2] + arr[1] + arr[0];
+    o2.push(arr[3]);
+    }
+    if (o2.top != -1)
     {
-      std::cout<<o2.pop();
+    std::cout << o2.pop() << std::endl;
     }
 }
