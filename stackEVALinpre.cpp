@@ -170,7 +170,7 @@ int main()
       o1.pop();
       }
       i++;
-    }
+}
     while (o1.top != -1) {
     arr[0] = o2.pop();
     arr[1] = o2.pop();
