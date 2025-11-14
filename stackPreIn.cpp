@@ -1,3 +1,4 @@
+//stack prefix to infix
 #include<iostream>
 #include<cctype>
 #include<string>
