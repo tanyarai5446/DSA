@@ -38,7 +38,6 @@ int presi(char c)
     case '-':return 1;
     default:return 0;
   }
-
 }
 int main()
 {
@@ -66,7 +65,6 @@ int main()
   }
   i++;
 }
-
 if (z.top != -1) {
         cout << "Postfix expression: " << z.pop() << endl;
     }
