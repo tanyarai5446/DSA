@@ -74,7 +74,4 @@ int main()
     if (z.top != -1) {
         cout << "Infix expression: " << z.pop() << endl;
     }
-
-
-    
  }
