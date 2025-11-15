@@ -6,10 +6,12 @@ struct Lstack
     Lstack *next;
 };
 Lstack *top,*temp,*ttemp;
+
 void init()
 {
     top=temp=ttemp=nullptr;
 }
+
 void push(int x)
 {
     temp=new Lstack;
@@ -18,6 +20,7 @@ void push(int x)
     temp->next=top;
     top=temp;
 }
+
 int pop()
 {
     int y;
