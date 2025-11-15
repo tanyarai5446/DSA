@@ -61,7 +61,6 @@ void dispO() // Display in original order (bottom to top)
     }
     cout << endl;
 }
-
 int main()
 {
     init();
