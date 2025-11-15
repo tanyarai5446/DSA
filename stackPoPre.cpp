@@ -74,7 +74,4 @@ int main()
     if (z.top != -1) {
         cout << "prefix expression: " << z.pop() << endl;
     }
-
-
-    
  }
