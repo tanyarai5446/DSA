@@ -9,7 +9,6 @@ struct str
     {
         data = new char[s];
     }
-   
 };
 int getLength(char s[])
 {
