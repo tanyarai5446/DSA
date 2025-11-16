@@ -78,21 +78,13 @@ void delanymth(int m)
   
 }
 void disp()
-
 {
-
-temp=first;
-
-while(temp!=null)
-
-{
-
-cout<<temp->data<<endl;
-
-temp=temp->next;
-
-}
-
+  temp=first;
+  while(temp!=null)
+ {
+  cout<<temp->data<<endl;
+  temp=temp->next;
+ }
 }
 
 int main()
