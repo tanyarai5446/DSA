@@ -148,7 +148,6 @@ void disp()
         cout<<temp->data<<"\n";
         temp=temp->next;
     }while(temp!=first);
-
 }
 
 int main()
