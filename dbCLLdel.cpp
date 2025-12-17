@@ -12,10 +12,13 @@ void addnode()
     ttemp->next=ttemp->prev=nullptr;
     cin>>ttemp->data;
     if(first==nullptr)
-    {first=ttemp;
-    ttemp->next=ttemp->prev=ttemp;
-    temp=ttemp;}
-    else{
+    {
+        first=ttemp;
+        ttemp->next=ttemp->prev=ttemp;
+        temp=ttemp;
+    }
+    else
+    {
        temp->next=ttemp;
        ttemp->prev=temp;
        ttemp->next=first;
