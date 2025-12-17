@@ -26,7 +26,6 @@ void addnode()
        first->prev=ttemp;
     }
     temp=ttemp;
-
 }
 void add_after_first(int x)
 {
@@ -84,8 +83,8 @@ void disp()
     temp=first;
     do
     {
-        cout<<temp->data<<"\n";
-        temp=temp->next;
+      cout<<temp->data<<"\n";
+      temp=temp->next;
     }while(temp!=first);
 }
 
