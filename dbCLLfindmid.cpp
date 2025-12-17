@@ -28,7 +28,6 @@ void addnode()
        first->prev=ttemp;
     }
     temp=ttemp;
-
 }
 void findMid()
 {
@@ -55,8 +54,8 @@ void disp()
     temp=first;
     do
     {
-        cout<<temp->data<<"\n";
-        temp=temp->next;
+      cout<<temp->data<<"\n";
+      temp=temp->next;
     }while(temp!=first);
 }
 
