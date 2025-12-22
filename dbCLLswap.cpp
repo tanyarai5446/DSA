@@ -84,7 +84,8 @@ if (m > count || n > count) {
  for(int i=1;i<n;i++)nnode=nnode->next;
 //adjacent cases     
  if(mnode->next==nnode)
- {  node*mbefore=mnode->prev;
+   {  
+    node*mbefore=mnode->prev;
     node*nafter=nnode->next;
 
     mbefore->next=nnode;
@@ -97,7 +98,7 @@ if (m > count || n > count) {
     nafter->prev=mnode;
     
     if(mnode==head)head=nnode;
- }
+   }
  else{
     node* mbefore = mnode->prev;
     node* mafter = mnode->next;
@@ -115,7 +116,7 @@ if (m > count || n > count) {
 
     if(mnode==head)head=nnode;
     else if(nnode==head)head=mnode;
- }
+   }
 }
 void disp()
 {
