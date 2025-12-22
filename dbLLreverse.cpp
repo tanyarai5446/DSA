@@ -16,9 +16,11 @@ void addnode()
     ttemp->next=ttemp->prev=null;
     if(first==null)
     first=ttemp;
-    else{
+    else
+    {
     temp->next=ttemp;
-    ttemp->prev=temp;}
+    ttemp->prev=temp;
+    }
     temp=ttemp;
 
 }
