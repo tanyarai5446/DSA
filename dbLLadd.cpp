@@ -111,12 +111,12 @@ void disp()
 
 int main()
 {
-    first=temp=ttemp=null;
-    int n;cin>>n;
-    for(int i=0;i<n;i++)
-    {
-        addnode();
-    }
+  first=temp=ttemp=null;
+  int n;cin>>n;
+  for(int i=0;i<n;i++)
+  {
+    addnode();
+  }
 cout<<"\n";
 
 disp();
