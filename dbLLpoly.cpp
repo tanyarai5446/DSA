@@ -9,11 +9,13 @@ poly *first,*temp,*ttemp,*poly1,*poly2,*sum,*diff,*prod;
 void insertdata(poly *&first,int coef,int pow)
 {
     ttemp=new poly{coef,pow,nullptr,nullptr};
-    if(!first||pow>first->pow){
+    if(!first||pow>first->pow)
+    {
     ttemp->next=first;
     if(first)first->prev=ttemp;
     first=ttemp;
-    return;}
+    return;
+    }
     poly *curr=first;
     while(curr->next&&curr->next->pow>=pow)
     curr=curr->next;
