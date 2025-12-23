@@ -45,7 +45,8 @@ void del_first()
     first=temp;
 }
 void delanyMth(int m)
-{ if(first==null)return;
+{ 
+  if(first==null)return;
   temp=first;
   ttemp=first;
   int count=1;
