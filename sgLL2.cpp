@@ -21,7 +21,6 @@ void addnode(int val)
   while(temp->next!=null)
   {
   temp=temp->next;
-
   }
   ttemp=new NatNo;
   ttemp->data=val;
