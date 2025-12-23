@@ -13,13 +13,17 @@ void addnode()
    ttemp=new node;
    cin>>ttemp->data;
    ttemp->next=first;//default 
-   if(first==null){
+   if(first==null)
+   {
    first=temp=ttemp;
-   ttemp->next=first;}//circular ink
-   else{
+   ttemp->next=first;
+   }//circular ink
+   else
+   {
    temp->next=ttemp;
    ttemp->next=first;
-   temp=ttemp;}
+   temp=ttemp;
+   }
 }
 void add_before_first(int x)
 {
