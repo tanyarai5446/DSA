@@ -59,7 +59,8 @@ void mergedLL()
     //first=null;
     //temp=null;
     while(etemp!=null&&otemp!=null)
-    {   ttemp=new NatNo;
+    {   
+        ttemp=new NatNo;
         if(etemp->data<otemp->data)
         {
             ttemp->data =etemp->data;
