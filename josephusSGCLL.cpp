@@ -12,12 +12,15 @@ void addnode()
     cin>>ttemp->data;
     ttemp->next=nullptr;
     if(!first)
-        {first=temp=ttemp;
-        ttemp->next=first;}
-    else
-        {temp->next=ttemp;
+    {   
+        first=temp=ttemp;
         ttemp->next=first;
-    temp=ttemp;}
+    }
+    else
+    {   temp->next=ttemp;
+        ttemp->next=first;
+        temp=ttemp;
+    }
 }
 void josephus(node*&head,int n,int k)
 {
