@@ -61,7 +61,6 @@ void add_after_given(int x,int y)
   ttemp->data=y;
   ttemp->next=temp->next;
   temp->next=ttemp;
-
 }
 
 int main()
