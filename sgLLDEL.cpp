@@ -122,7 +122,6 @@ void del_last()
   }
   ttemp->next=null;
   delete temp;
-  
 }
 int main()
 {
