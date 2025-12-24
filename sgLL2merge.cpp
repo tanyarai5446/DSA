@@ -6,7 +6,7 @@ using namespace std;
  struct NatNo
 {
   int data;
-    NatNo *next;
+  NatNo *next;
 };
 NatNo *first,*temp,*ttemp,*p,*q,*r,*ptemp,*pttemp,
 *ntemp,*nttemp,*efirst=null,*ofirst=null,*etemp=null,*otemp=null;
@@ -17,13 +17,13 @@ void init()
 }
 void createEfirst(int val)
 {
- efirst=new NatNo;
+  efirst=new NatNo;
   efirst->data=val;
   efirst->next=null;
 }
 void createOfirst(int val)
 {
- ofirst=new NatNo;
+  ofirst=new NatNo;
   ofirst->data=val;
   ofirst->next=null;
 }
@@ -34,7 +34,6 @@ void addnode(NatNo* head,int val)
   while(temp->next!=null)
   {
   temp=temp->next;
-
   }
   ttemp=new NatNo;
   ttemp->data=val;
