@@ -10,7 +10,9 @@ struct palstr
 };
 palstr *first,*temp,*ttemp,*p,*revfirst,*revtemp,*rev,*orig;
 void init()
-{first=temp=ttemp=null;}
+{
+    first=temp=ttemp=null;
+}
 void addnode(char name)
 { 
     ttemp=new palstr;
