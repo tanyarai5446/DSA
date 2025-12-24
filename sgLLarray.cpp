@@ -77,7 +77,7 @@ int main()
     int a[n];
     for(int i=0;i<n;i++)
     {
-        cin>>a[i];
+      cin>>a[i];
     }
     cout<<"array stored as LL: \n";
     arraytoLL(a,n);
