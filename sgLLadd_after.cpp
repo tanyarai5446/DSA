@@ -7,7 +7,7 @@ using namespace std;
 
  struct node
 {
-  int data;
+    int data;
     node *next;
 };
 node *first,*temp,*ttemp,*p,*q,*r,*ptemp,*pttemp,
