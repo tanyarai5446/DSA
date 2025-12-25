@@ -11,7 +11,9 @@ struct dict
 };
 dict *first,*temp,*ttemp,*i,*j;
 void init()
-{first=temp=ttemp=null;}
+{
+    first=temp=ttemp=null;
+}
 void addnode()
 {
     ttemp=new dict;
