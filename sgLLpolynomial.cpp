@@ -10,7 +10,9 @@ struct polynode
 };
 polynode *first,*temp,*ttemp,*poly1,*poly2,*sum,*diff,*prod,*a,*b;
 void init()
-{first=temp=ttemp=poly1=poly2=null; }
+{
+    first=temp=ttemp=poly1=poly2=null; 
+}
 void insertdata(polynode*& head, int coef, int pow) 
 {
     // Skip inserting zero coefficient terms
