@@ -104,11 +104,13 @@ int main()
     createLoop(first, loopPos);
 
     cout<<"\n";
-    if(hasLoop(first)){
+    if(hasLoop(first))
+    {
         cout<<"The given LL has a inner loop\n";
         removeLoop(first);
         cout<<"list after removing loop\n";
-        disp();}
+        disp();
+    }
     else cout<<"The given LL is perfect";
     
 }
