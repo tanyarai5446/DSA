@@ -68,6 +68,4 @@ int main()
         cout << "Nth node from end is: " << val->data << endl;
     else
         cout << "Invalid N — exceeds list length.\n";
-
-
 }
