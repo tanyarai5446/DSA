@@ -16,7 +16,7 @@ void addnodesortedly()
     first=ttemp;
     return;
   }
- if(ttemp->data>first->data)
+  if(ttemp->data>first->data)
   {
     ttemp->next=first;
     first=ttemp;
@@ -24,11 +24,11 @@ void addnodesortedly()
   }
   temp=first;
   while(temp->next && temp->next->data>ttemp->data)
-      {
-        temp=temp->next;
-      }
-      ttemp->next=temp->next;
-      temp->next=ttemp;
+  {
+    temp=temp->next;
+  }
+  ttemp->next=temp->next;
+  temp->next=ttemp;
 
 }
 void disp()
