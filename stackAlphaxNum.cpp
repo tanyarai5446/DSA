@@ -49,7 +49,8 @@ int main()
    for(int i=0;i<len;i++)
    {
     cout<<a[i];
-   }cout<<endl;
+   }
+   cout<<endl;
    s.init(len);s1.init(len);s2.init(len);s3.init(len);
    for(int i=0;i<len;i++)
    s.push(a[i]);
