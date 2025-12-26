@@ -50,7 +50,8 @@ CLLstack* converttoCLL()
 void displayCLL(CLLstack* head) {
     if (!head) return;
     temp = head;
-    do {
+    do 
+    {
         cout << temp->data << " ";
         temp = temp->next;
     } while (temp != head);
