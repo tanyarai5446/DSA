@@ -57,11 +57,12 @@ void swapMN(int x,int y)
  if(x==y) return;
 
  // Ensure x comes before y in the list
-    if (x > y) {
-        int tempVal = x;
-        x = y;
-        y = tempVal;
-    }
+  if (x > y) 
+  {
+    int tempVal = x;
+    x = y;
+    y = tempVal;
+  }
 
  temp=first;
  ttemp=first;
