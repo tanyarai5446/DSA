@@ -68,8 +68,8 @@ int main()
 	addnode(50);
 	addnode(60);
 	disp();
-    cout<<"\n";
-    reverse();
-    disp();
+  cout<<"\n";
+  reverse();
+  disp();
     
 }
