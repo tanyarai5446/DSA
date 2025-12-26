@@ -21,19 +21,22 @@ void insertdata(polynode*& head, int coef, int pow)
     ttemp = new polynode{coef, pow, nullptr};
 
     // Insert at head if list empty or new pow is greater than head pow (descending order)
-    if (!head || pow > head->pow) {
+    if (!head || pow > head->pow) 
+    {
         ttemp->next = head;
         head = ttemp;
         return;
     }
 
     temp = head;
-    while (temp) {
+    while (temp) 
+    {
         // If same power, accumulate coefficient and delete new node
         if (temp->pow == pow) {
             temp->coef += coef;
             // If coefficient becomes zero, remove the node
-            if (temp->coef == 0) {
+            if (temp->coef == 0) 
+            {
                 // remove head
                 if (temp == head) {
                     polynode* toDel = head;
