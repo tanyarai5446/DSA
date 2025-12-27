@@ -59,7 +59,7 @@ void displayCLL(CLLstack* head) {
 }
 int main()
 {  
-     init();
+    init();
     for (int i = 1; i <= max; i++)
     {
         push(i * 10); // Push 10, 20, ..., 70
