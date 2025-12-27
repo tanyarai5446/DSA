@@ -99,7 +99,8 @@ if (m > count || n > count) {
     
     if(mnode==head)head=nnode;
    }
- else{
+ else
+   {
     node* mbefore = mnode->prev;
     node* mafter = mnode->next;
     node* nbefore = nnode->prev;
