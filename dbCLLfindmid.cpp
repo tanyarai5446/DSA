@@ -58,7 +58,6 @@ void disp()
       temp=temp->next;
     }while(temp!=first);
 }
-
 int main()
 {
     first=temp=ttemp=nullptr;
@@ -70,6 +69,5 @@ int main()
     cout<<"\n";
     disp();
     cout<<"\n";
-    findMid();
-    
+    findMid();  
 }
