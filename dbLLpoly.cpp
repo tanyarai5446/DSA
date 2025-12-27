@@ -57,9 +57,7 @@ poly * addpoly(poly*p1,poly*p2)
         insertdata(result, p2->coef, p2->pow);
         p2 = p2->next;
     }
-
     return result;
-
  }
  poly* subpoly(poly*p1,poly*p2)
  {
