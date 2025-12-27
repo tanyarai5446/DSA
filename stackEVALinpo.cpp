@@ -28,8 +28,8 @@ struct inpo
 };
 struct intstack
 {
-    int *data;
-    int top,size;
+   int *data;
+   int top,size;
    void init(int n)
    {
    size=n;
