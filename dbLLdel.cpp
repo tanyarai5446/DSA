@@ -86,7 +86,6 @@ void disp()
   temp=temp->next;
  }
 }
-
 int main()
 {
   first=temp=ttemp=null;
@@ -95,20 +94,18 @@ int main()
   {
     addnode();
   }
-cout<<"\n";
+  cout<<"\n";
 
-disp();
-cout<<"\n";
-delfirst();
-disp();
-cout<<"\n";
+  disp();
+  cout<<"\n";
+  delfirst();
+  disp();
+  cout<<"\n";
 
-dellast();
-disp();
-cout<<"\n";
+  dellast();
+  disp();
+  cout<<"\n";
 
-delanymth(3);
-disp();
-
-
+  delanymth(3);
+  disp();
 }
