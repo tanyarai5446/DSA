@@ -45,8 +45,6 @@ void dellast()
   delete temp;
 
 }
-
-
 void del_before_given(int y) {
     if (first == nullptr || first->next == first) return;
 
