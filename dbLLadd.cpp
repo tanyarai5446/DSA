@@ -108,7 +108,6 @@ void disp()
     temp=temp->next;
   }
 }
-
 int main()
 {
   first=temp=ttemp=null;
@@ -117,14 +116,13 @@ int main()
   {
     addnode();
   }
-cout<<"\n";
+  cout<<"\n";
 
-disp();
-add_before_first();
-disp();
-add_before_given(3);
-disp();
-add_after_given(5);
-disp();
-
+  disp();
+  add_before_first();
+  disp();
+  add_before_given(3);
+  disp();
+  add_after_given(5);
+  disp();
 }
