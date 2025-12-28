@@ -18,7 +18,6 @@ void init()
 {
  first=temp=ttemp=null;
 }
-
 void arraytoLL(int a[],int n)
 { 
    int i=0;
