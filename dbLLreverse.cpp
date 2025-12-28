@@ -22,7 +22,6 @@ void addnode()
     ttemp->prev=temp;
     }
     temp=ttemp;
-
 }
 void reverse()
 {
