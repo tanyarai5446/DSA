@@ -64,7 +64,6 @@ void swapl2l()
 }
 
 void swapMN(node*&head,int m,int n)
-
 {
 
 if(!head)
