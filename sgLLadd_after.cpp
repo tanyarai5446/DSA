@@ -32,7 +32,7 @@ void addnode(int val)
 }
 void createfirst(int val)
 {
- first=new node;
+  first=new node;
   first->data=val;
   first->next=null;
 }
