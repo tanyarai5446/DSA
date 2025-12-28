@@ -65,12 +65,11 @@ void swapl2l()
 
 void swapMN(node*&head,int m,int n)
 {
-
-if(!head)
-{
+  if(!head)
+  {
     cout<<"list is empty\n";
     return;
-}
+  }
 if(m==n)
 {
     cout<<"swap not possible\n";
