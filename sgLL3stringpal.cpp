@@ -22,9 +22,7 @@ void addnode(char name)
     first=ttemp;
     else
     temp->next=ttemp;
-
     temp=ttemp;
-
 }
 void disp(palstr* head)
 {
