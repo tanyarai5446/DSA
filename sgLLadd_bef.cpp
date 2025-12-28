@@ -45,7 +45,6 @@ void disp()
    temp=temp->next;
  }
 }
-
 void add_before_first()
 {
     temp = new node;
@@ -79,7 +78,6 @@ void add_before_last()
     q->next=temp;
     ttemp->next=q;
 }
-
 
 int main()
 {
