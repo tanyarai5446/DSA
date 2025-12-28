@@ -118,16 +118,16 @@ int main()
     poly* poly1 = nullptr;
     poly* poly2 = nullptr;
 
-insertdata(poly1, 3, 2); // 3x^2
-insertdata(poly1, 5, 1); // 5x^1
-insertdata(poly2, 2, 1); // 2x^1
-insertdata(poly2, 4, 0); // 4
+    insertdata(poly1, 3, 2); // 3x^2
+    insertdata(poly1, 5, 1); // 5x^1
+    insertdata(poly2, 2, 1); // 2x^1
+    insertdata(poly2, 4, 0); // 4
 
-poly* sum = addpoly(poly1, poly2);
-poly* diff = subpoly(poly1, poly2);
-poly* prod = mulpoly(poly1, poly2);
+    poly* sum = addpoly(poly1, poly2);
+    poly* diff = subpoly(poly1, poly2);
+    poly* prod = mulpoly(poly1, poly2);
 
-display(sum);   // 3x^2 + 7x^1 + 4
-display(diff);  // 3x^2 + 3x^1 - 4
-display(prod);  // 6x^3 + 22x^2 + 20x^1
+    display(sum);   // 3x^2 + 7x^1 + 4
+    display(diff);  // 3x^2 + 3x^1 - 4
+    display(prod);  // 6x^3 + 22x^2 + 20x^1
 }
