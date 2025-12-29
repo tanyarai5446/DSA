@@ -1,5 +1,4 @@
 //add functions
-
 #include<iostream>
 using namespace std;
 #define null 0
@@ -21,11 +20,9 @@ void addnode()
     temp->next=ttemp;
     ttemp->prev=temp;}
     temp=ttemp;
-
 }
 
 void add_before_first()
-
 {
 
  p=new node;
@@ -59,22 +56,14 @@ void add_before_given(int x)
 }
 
 void add_after_given(int y)
-
 {
-
  temp = first;
-
  while(temp->data!=y)
-
-{
-
-temp=temp->next;
-
+ {
+ temp=temp->next;
  }
-
  p=new node;
-
-cin>>p->data;
+ cin>>p->data;
 
  p->prev=temp;
 
