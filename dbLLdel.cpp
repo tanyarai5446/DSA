@@ -95,17 +95,14 @@ int main()
     addnode();
   }
   cout<<"\n";
-
   disp();
   cout<<"\n";
   delfirst();
   disp();
   cout<<"\n";
-
   dellast();
   disp();
   cout<<"\n";
-
   delanymth(3);
   disp();
 }
