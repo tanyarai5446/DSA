@@ -105,8 +105,10 @@ poly* mulpoly(poly*p1,poly*p2)
     }
     return result;
 }
-void display(poly* head) {
-    while (head) {
+void display(poly* head) 
+{
+    while (head) 
+    {
         cout << head->coef << "x^" << head->pow;
         if (head->next && head->next->coef >= 0) cout << " + ";
         head = head->next;
