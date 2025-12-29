@@ -44,30 +44,18 @@ void add_before_first()
 }
 
 void add_before_given(int x)
-
 {
  temp=first;
-
-while(temp->data!=x)
-
-{
-
- temp=temp->next;
-
-}
-
-p=new node;
-
-cin>>p->data;
-
-p->next=temp;
-
-p->prev=temp->prev;
-
-temp->prev->next=p;
-
-temp->prev=p;
-
+ while(temp->data!=x)
+ {
+   temp=temp->next;
+ }
+ p=new node;
+ cin>>p->data;
+ p->next=temp;
+ p->prev=temp->prev;
+ temp->prev->next=p;
+ temp->prev=p;
 }
 
 void add_after_given(int y)
