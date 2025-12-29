@@ -70,15 +70,17 @@ void swapMN(node*&head,int m,int n)
  node*mnode=head;
  node*nnode=head;
  int count = 1;
-node* temp = head;
-while (temp->next != head) {
+ node* temp = head;
+ while (temp->next != head) 
+ {
     count++;
     temp = temp->next;
-}
-if (m > count || n > count) {
+ }
+ if (m > count || n > count) 
+ {
     cout << "Invalid positions: m or n out of bounds\n";
     return;
-}
+ }
  //find mth and nth  node
  for(int i=1;i<m;i++)mnode=mnode->next;
  for(int i=1;i<n;i++)nnode=nnode->next;
