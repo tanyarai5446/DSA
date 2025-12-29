@@ -39,21 +39,13 @@ void reverse()
 }
 
 void disp(node*head)
-
 {
-
-temp=head;
-
-while(temp!=null)
-
-{
-
-cout<<temp->data<<endl;
-
-temp=temp->next;
-
-}
-
+  temp=head;
+  while(temp!=null)
+  {
+    cout<<temp->data<<endl;
+    temp=temp->next;
+  }
 }
 
 int main()
