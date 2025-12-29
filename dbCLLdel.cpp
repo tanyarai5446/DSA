@@ -43,7 +43,6 @@ void dellast()
   ttemp->next=first;
   first->prev=ttemp;
   delete temp;
-
 }
 void del_before_given(int y) {
     if (first == nullptr || first->next == first) return;
