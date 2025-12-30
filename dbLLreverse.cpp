@@ -62,6 +62,4 @@ disp(first);
 cout<<"\n";
 reverse();
 disp(first);
-
-
 }
