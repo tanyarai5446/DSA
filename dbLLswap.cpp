@@ -78,7 +78,8 @@ nodeM=head;   nodeN=head;
 for(int i=1;i<m;i++)nodeM=nodeM->next;
 for(int i=1;i<n;i++)nodeN=nodeN->next;
 if(!nodeM||!nodeN)return;
-if(nodeM->next==nodeN){
+if(nodeM->next==nodeN)
+{
     prevM=nodeM->prev;
     nextN=nodeN->next;
     if(prevM)prevM->next=nodeN;
@@ -88,7 +89,6 @@ if(nodeM->next==nodeN){
     nodeM->prev = nodeN;
     nodeM->next = nextN;
     if (head == nodeM) head = nodeN;
-
 }
 else{
 // Swap prev pointers
