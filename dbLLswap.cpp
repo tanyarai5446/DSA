@@ -41,7 +41,6 @@ first = temp;
 }
 
 void swapl2l()
-
 {
 
  temp=first;
