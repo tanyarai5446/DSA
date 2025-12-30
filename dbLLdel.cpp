@@ -27,7 +27,6 @@ void delfirst()
   temp->prev=nullptr;
   delete first;
   first=temp;
-  
 }
 void dellast()
 {
@@ -70,7 +69,8 @@ void delanymth(int m)
   {
     before->next=nullptr;
   }
-  else{
+  else
+  {
     before->next=after;
     after->prev=before;
   }
