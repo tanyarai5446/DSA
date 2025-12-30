@@ -64,10 +64,8 @@ void add_after_given(int y)
  }
  p=new node;
  cin>>p->data;
-
  p->prev=temp;
-
-p->next=temp->next;
+ p->next=temp->next;
 
 temp->next=p;
 
