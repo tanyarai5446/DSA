@@ -37,7 +37,6 @@ first->next=ttemp;
 
 temp->next=first;
 first = temp;
-
 }
 
 void swapl2l()
