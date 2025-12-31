@@ -46,7 +46,8 @@ int main()
     cout<<"enter a word: ";
     fgets(word,100,stdin);
     int len=getLength(word);
-    if (word[len - 1] == '\n') {
+    if (word[len - 1] == '\n') 
+    {
         word[len - 1] = '\0';
         len--;
     }
