@@ -21,12 +21,13 @@ struct inpo
     data[++top]=c;
    }
    std::string pop()
-    {
+   {
     if(top==-1)
     return 0;
     return data[top--];
-    }
-}; 
+   }
+};
+
 int presi(char c)
 {
   switch(c)
