@@ -50,7 +50,8 @@ int main()
   char a[100];
   fgets(a,100,stdin);
   int len=getLength(a);
-  if (a[len - 1] == '\n') {
+  if (a[len - 1] == '\n') 
+  {
     a[len - 1] = '\0';
     len--;
   }
