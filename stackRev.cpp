@@ -50,7 +50,6 @@ void dispR() // Display in reverse (top to bottom)
     }
     cout << endl;
 }
-
 void dispO() // Display in original order (bottom to top)
 {
     int temp = 0;
