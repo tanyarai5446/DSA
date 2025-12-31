@@ -70,8 +70,8 @@ int main()
      }
      i++;
     }
-    
-    if (z.top != -1) {
+    if (z.top != -1) 
+    {
         cout << "prefix expression: " << z.pop() << endl;
     }
  }
