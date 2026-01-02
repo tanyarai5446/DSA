@@ -44,7 +44,8 @@ void mergeAlternately(Stack& s1, Stack& s2, Stack& s3) {
     }
 }
 
-int main() {
+int main() 
+{
     Stack s1, s2, s3;
     s1.init(5); s2.init(5); s3.init(10);
 
