@@ -11,7 +11,6 @@ void init()
 {
     top=temp=ttemp=nullptr;
 }
-
 void push(int x)
 {
     temp=new Lstack;
