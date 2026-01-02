@@ -62,5 +62,4 @@ int main()
     s1.push(a[i]);
   }
   nonalphacheck(s1);
-
 }
