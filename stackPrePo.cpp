@@ -68,6 +68,5 @@ int main()
    if (z.top != -1) 
    {
         cout << "Postfix expression: " << z.pop() << endl;
-    }
-
+   }
 }
