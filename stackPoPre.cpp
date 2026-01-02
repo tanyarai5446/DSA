@@ -69,7 +69,7 @@ int main()
           z.push(arr[2]);
      }
      i++;
-    }
+ }
     if (z.top != -1) 
     {
         cout << "prefix expression: " << z.pop() << endl;
