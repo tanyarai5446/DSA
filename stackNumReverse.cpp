@@ -38,9 +38,11 @@ int main()
     cin>>n;
     if(n>max)
     cout<<"pls re enter upto 6 digit\n";
-    else{
+    else
+    {
     int reverse=rev(n);
-    cout<<"original: "<<n<<"\n"<<"reversed: "<<reverse;}
+    cout<<"original: "<<n<<"\n"<<"reversed: "<<reverse;
+    }
     return 0;
 }
 
