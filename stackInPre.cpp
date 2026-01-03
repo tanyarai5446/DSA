@@ -41,11 +41,11 @@ struct operand
     data[++top]=c;
    }
    std::string pop()
-    {
+   {
     if(top==-1)
     return 0;
     return data[top--];
-    }
+   }
 }; 
 int getlength(char s[])
 {
