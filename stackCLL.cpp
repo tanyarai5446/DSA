@@ -47,7 +47,8 @@ CLLstack* converttoCLL()
     
     return head;
 }
-void displayCLL(CLLstack* head) {
+void displayCLL(CLLstack* head) 
+{
     if (!head) return;
     temp = head;
     do 
