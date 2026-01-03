@@ -63,7 +63,6 @@ void swapMN(int x,int y)
     x = y;
     y = tempVal;
   }
-
  temp=first;
  ttemp=first;
  p=q=null;
