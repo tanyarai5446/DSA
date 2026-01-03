@@ -19,11 +19,11 @@ struct inpo
     data[++top]=c;
    }
    char pop()
-    {
+   {
     if(top==-1)
     return 0;
     return data[top--];
-    }
+   }
 }; 
 int getlength(char s[])
 {
