@@ -171,7 +171,8 @@ int main()
       }
       i++;
 }
-    while (o1.top != -1) {
+    while (o1.top != -1) 
+    {
     arr[0] = o2.pop();
     arr[1] = o2.pop();
     arr[2] = o1.pop();
