@@ -59,7 +59,8 @@ int main()
 
     // Print merged stack
     cout << "Merged Stack (top to bottom):\n";
-    while (!s3.isEmpty()) {
+    while (!s3.isEmpty()) 
+    {
         cout << s3.pop() << " ";
     }
     cout << endl;
