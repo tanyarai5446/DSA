@@ -44,7 +44,6 @@ CLLstack* converttoCLL()
     while(ttemp->next != nullptr)
     ttemp = ttemp->next;
     ttemp->next = head;
-    
     return head;
 }
 void displayCLL(CLLstack* head) 
