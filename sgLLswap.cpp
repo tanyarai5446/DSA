@@ -71,7 +71,6 @@ void swapMN(int x,int y)
     p=temp;
     temp=temp->next;
  }
- 
  while(ttemp!=null&&ttemp->data!=y)
  {
     q=ttemp;
