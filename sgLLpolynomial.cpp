@@ -32,13 +32,15 @@ void insertdata(polynode*& head, int coef, int pow)
     while (temp) 
     {
         // If same power, accumulate coefficient and delete new node
-        if (temp->pow == pow) {
+        if (temp->pow == pow) 
+        {
             temp->coef += coef;
             // If coefficient becomes zero, remove the node
             if (temp->coef == 0) 
             {
                 // remove head
-                if (temp == head) {
+                if (temp == head) 
+                {
                     polynode* toDel = head;
                     head = head->next;
                     delete toDel;
