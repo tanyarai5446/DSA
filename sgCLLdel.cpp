@@ -81,7 +81,8 @@ void delanyMth(int m)
   {
     ttemp->next=first;
   }
-  else{
+  else
+  {
     ttemp->next=temp->next;
   } 
     delete temp;
