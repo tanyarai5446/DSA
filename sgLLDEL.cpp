@@ -144,5 +144,4 @@ int main()
     cout<<"\n";
     del_last();
     disp();
-
 }
