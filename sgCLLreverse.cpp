@@ -17,10 +17,12 @@ void addnode()
    first=temp=ttemp;
    ttemp->next=first;
    }//circular ink
-   else{
+   else
+   {
    temp->next=ttemp;
    ttemp->next=first;
-   temp=ttemp;}
+   temp=ttemp;
+   }
 }
 void reverse()
 {
