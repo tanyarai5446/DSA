@@ -66,12 +66,16 @@ void swapL2L()
 }
 void swapMN(node*head,int m,int n)
 {
-    if(!head){
+    if(!head)
+    {
         cout<<"list is empty.Swap not performed\n9";
-        return;}
-    if(m==n) {
+        return;
+    }
+    if(m==n) 
+    {
         cout<<"positions are same .no swap needed\n";
-        return;}//if list empty or x==y 
+        return;
+    }//if list empty or x==y 
     if(m>n)swap(m,n);
     prevM=null;    currM=head;
     prevN=null;    currN=head;
