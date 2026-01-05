@@ -29,7 +29,7 @@ void addnode(int val)
 }
 void createfirst(int val)
 {
- first=new NatNo;
+  first=new NatNo;
   first->data=val;
   first->next=null;
 }
@@ -67,7 +67,6 @@ void even_part()
         etemp->next=ntemp;
         etemp=etemp->next;
      }
-
     }
     temp=temp->next;
   }
