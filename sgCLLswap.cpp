@@ -63,7 +63,6 @@ void swapL2L()
     ttemp->next=p;
     p->next=temp;
     temp->next=first;
-
 }
 void swapMN(node*head,int m,int n)
 {
