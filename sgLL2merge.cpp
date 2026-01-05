@@ -2,7 +2,6 @@
 #include<iostream>
 #define null 0
 using namespace std;
-
  struct NatNo
 {
   int data;
