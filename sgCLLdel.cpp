@@ -90,9 +90,10 @@ void delanyMth(int m)
 void disp()
 {   
     temp=first;
-    do{
-        cout<<temp->data<<"\n";
-        temp=temp->next;
+    do
+    {
+      cout<<temp->data<<"\n";
+      temp=temp->next;
     }while(temp!=first);
 }
 int main()
