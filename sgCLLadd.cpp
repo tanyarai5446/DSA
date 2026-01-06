@@ -51,14 +51,16 @@ void add_before_given(int x,int y)
  p=new node;
  p->data=y;
  if(temp==first)
- {  q=first;
+ {  
+    q=first;
     while(q->next!=first)
     q=q->next;
     p->next=temp;
     q->next=p;
     first=p;
  }
- else{
+ else
+ {
     p->next=temp;
     ttemp->next=p;
  }
