@@ -85,7 +85,7 @@ void delanyMth(int m)
   {
     ttemp->next=temp->next;
   } 
-    delete temp;
+  delete temp;
 }
 void disp()
 {   
