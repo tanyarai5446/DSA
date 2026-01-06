@@ -97,13 +97,14 @@ void disp()
     }while(temp!=first);
 }
 int main()
-{   first=ttemp=temp=null;
+{   
+    first=ttemp=temp=null;
     int n;
     cout<<"enter no. of terms in LL: ";
     cin>>n;
     for(int i=0;i<n;i++)
     {
-        addnode();
+      addnode();
     }
     cout<<"\n";
     disp();
