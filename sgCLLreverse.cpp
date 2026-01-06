@@ -29,7 +29,8 @@ void reverse()
   temp=first;
   ttemp=null;
   node *next=null;
-  do{
+  do
+  {
      next=temp->next;
      temp->next=ttemp;
      ttemp=temp;
