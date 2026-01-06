@@ -80,7 +80,8 @@ void swapMN(node*head,int m,int n)
     prevM=null;    currM=head;
     prevN=null;    currN=head;
     int count=1;
-    while(count!=m){
+    while(count!=m)
+    {
         prevM=currM;
         currM=currM->next;
         count++;
