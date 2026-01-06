@@ -65,8 +65,6 @@ void add_before_given(int x,int y)
     ttemp->next=p;
  }
 }
-
-
 void disp()
 {   
     temp=first;
