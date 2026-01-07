@@ -14,12 +14,14 @@ struct opr
         top = -1;
     }
 
-    void push(char c) {
+    void push(char c) 
+    {
         if (top == size - 1) return;
         data[++top] = c;
     }
 
-    char pop() {
+    char pop() 
+    {
         if (top == -1) return 0;
         return data[top--];
     }
