@@ -117,7 +117,8 @@ int post(char post[],int l)
     {
         if(isalnum(post[i]))
         s.push(post[i]-'0');
-        else{
+        else
+        {
             op1=s.pop();
             op2=s.pop();
             R=calc(op1,op2,post[i]);
