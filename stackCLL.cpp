@@ -22,7 +22,6 @@ void push(int x)
     if(isfull())return;
     else
     stack[++top]=x;
-
 }
 void init()
 {
