@@ -43,7 +43,6 @@ int presi(char c)
     case '-':return 1;
     default:return 0;
   }
-
 }
 
 bool shouldpop(char top, char current) {
