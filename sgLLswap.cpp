@@ -131,7 +131,7 @@ int main()
 	addnode(40);
 	addnode(50);
     cout<<"/n";
-	disp();
+	  disp();
     cout<<"\n";
     swapFS();
     disp();
