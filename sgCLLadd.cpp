@@ -74,7 +74,8 @@ void disp()
     }while(temp!=first);
 }
 int main()
-{   first=ttemp=temp=null;
+{   
+    first=ttemp=temp=null;
     int n;
     cout<<"enter no. of terms in LL: ";
     cin>>n;
@@ -89,6 +90,5 @@ int main()
     disp();
     cout<<"\n";
     add_before_given(5,6);
-    disp();
-    
+    disp();  
 }
