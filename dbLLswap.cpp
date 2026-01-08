@@ -90,8 +90,9 @@ if(nodeM->next==nodeN)
     nodeM->next = nextN;
     if (head == nodeM) head = nodeN;
 }
-else{
-// Swap prev pointers
+else
+{
+    // Swap prev pointers
     if (nodeM->prev) nodeM->prev->next = nodeN;
     if (nodeN->prev) nodeN->prev->next = nodeM;
 
@@ -110,7 +111,6 @@ else{
 
 }
 void disp(node*head)
-
 {
 
 temp=head;
