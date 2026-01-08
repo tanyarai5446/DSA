@@ -66,8 +66,7 @@ void add_after_given(int y)
  cin>>p->data;
  p->prev=temp;
  p->next=temp->next;
-
-temp->next=p;
+ temp->next=p;
 
 temp->next->prev=p;
 
