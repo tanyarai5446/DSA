@@ -47,8 +47,10 @@ void delanymth(int m)
   int count=1;
   bool found=false;
   while(count<m&&temp->next!=null)
-  {temp=temp->next;
-  count++;}
+  {
+    temp=temp->next;
+    count++;
+  }
   if(count==m)
   {
     found=true;
