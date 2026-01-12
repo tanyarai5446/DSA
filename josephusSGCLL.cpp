@@ -70,5 +70,4 @@ int main()
     cin>>k;
     josephus(first,n,k);
     disp();
-    
 }
