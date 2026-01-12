@@ -79,11 +79,13 @@ poly * addpoly(poly*p1,poly*p2)
             p1=p1->next;
             p2=p2->next;}
     }
-    while (p1) {
+    while (p1) 
+    {
         insertdata(result, p1->coef, p1->pow);
         p1 = p1->next;
     }
-    while (p2) {
+    while (p2) 
+    {
         insertdata(result, -p2->coef, p2->pow);
         p2 = p2->next;
     }
