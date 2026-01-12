@@ -56,10 +56,10 @@ int main()
     {
         addnode();
     }
-cout<<"\n";
+  cout<<"\n";
 
-disp(first);
-cout<<"\n";
+  disp(first);
+  cout<<"\n";
 reverse();
 disp(first);
 }
