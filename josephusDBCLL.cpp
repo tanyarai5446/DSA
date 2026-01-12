@@ -25,7 +25,6 @@ void addnode()
        first->prev=ttemp;
     }
     temp=ttemp;
-
 }
 void josephus(node*&head,int n,int k)
 {
