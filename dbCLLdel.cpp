@@ -55,9 +55,10 @@ void del_before_given(int y) {
             break;
         }
         temp = temp->next;
-    } while (temp != first);
+    } while(temp != first);
 
-    if (!found) {
+    if (!found) 
+    {
         cout << "Value " << y << " not found in list.\n";
         return;
     }
