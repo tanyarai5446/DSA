@@ -64,8 +64,10 @@ void swapFL()
 }
 void swapMN(node*&head,int m,int n)
 {
- if(!head||(head->next==head&&head->prev==head)) return;
- if(m==n)return;
+ if(!head||(head->next==head&&head->prev==head)) 
+ return;
+ if(m==n)
+ return;
  if(m>n)swap(m,n);
  node*mnode=head;
  node*nnode=head;
