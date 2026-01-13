@@ -12,22 +12,22 @@ struct node
 node *first,*temp,*ttemp,*p;
 void addnode()
 {
-    ttemp=new node;
-    ttemp->next=ttemp->prev=nullptr;
-    cin>>ttemp->data;
-    if(first==nullptr)
-    {
-      first=ttemp;
-      ttemp->next=ttemp->prev=first;
-    }
-    else
-    {
-       temp->next=ttemp;
-       ttemp->prev=temp;
-       ttemp->next=first;
-       first->prev=ttemp;
-    }
-    temp=ttemp;
+  ttemp=new node;
+  ttemp->next=ttemp->prev=nullptr;
+  cin>>ttemp->data;
+  if(first==nullptr)
+  {
+    first=ttemp;
+    ttemp->next=ttemp->prev=first;
+  }
+  else
+  {
+    temp->next=ttemp;
+    ttemp->prev=temp;
+    ttemp->next=first;
+    first->prev=ttemp;
+  }
+  temp=ttemp;
 }
 void findMid()
 {
