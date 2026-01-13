@@ -78,7 +78,6 @@ void delanymth(int m)
     after->prev=before;
   }
   delete todelete;
-  
 }
 void disp()
 {
