@@ -67,9 +67,7 @@ void add_after_given(int y)
  p->prev=temp;
  p->next=temp->next;
  temp->next=p;
-
-temp->next->prev=p;
-
+ temp->next->prev=p;
 }
 
 void disp()
