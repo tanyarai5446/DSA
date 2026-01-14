@@ -39,8 +39,6 @@ void addnode(NatNo* head,int val)
   ttemp->next=null;
   temp->next=ttemp;
 }
-
-
 void disp(NatNo* head)
 {
  temp=head;
