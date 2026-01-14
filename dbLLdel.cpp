@@ -68,7 +68,8 @@ void delanymth(int m)
   {
     first=after;
     after->prev==nullptr;
-  }else if(after==nullptr)
+  }
+  else if(after==nullptr)
   {
     before->next=nullptr;
   }
