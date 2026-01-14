@@ -127,11 +127,10 @@ int main()
     {
         addnode();
     }
-cout<<"\n";
-
-disp(first);
-cout<<"\n";
-swapfs();
+    cout<<"\n";
+    disp(first);
+    cout<<"\n";
+    swapfs();
 disp(first);
 cout<<"\n";
 swapl2l();
