@@ -110,5 +110,4 @@ int main()
     cout<<"\n";
     odd_part();
     disp(ofirst);
-
 }
