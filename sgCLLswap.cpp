@@ -16,13 +16,17 @@ void addnode()
    ttemp=new node;
    cin>>ttemp->data;
    ttemp->next=first;//default 
-   if(first==null){
+   if(first==null)
+   {//circular ink
    first=temp=ttemp;
-   ttemp->next=first;}//circular ink
-   else{
+   ttemp->next=first;
+   }
+   else
+   {
    temp->next=ttemp;
    ttemp->next=first;
-   temp=ttemp;}
+   temp=ttemp;
+   }
 }
 void swapFS()
 {
