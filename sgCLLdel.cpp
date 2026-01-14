@@ -118,5 +118,4 @@ int main()
     delanyMth(1);
     disp();
     cout<<"\n";
-
 }
