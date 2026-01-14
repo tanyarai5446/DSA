@@ -101,7 +101,6 @@ poly* mulpoly(poly*p1,poly*p2)
             int newcoef=i->coef*j->coef;
             int newpow=i->pow+j->pow;
             insertdata(result,newcoef,newpow);       
-
         }
     }
     return result;
