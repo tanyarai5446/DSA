@@ -131,12 +131,12 @@ int main()
     disp(first);
     cout<<"\n";
     swapfs();
-disp(first);
-cout<<"\n";
-swapl2l();
-disp(first);
-cout<<"\n";
-swapMN(first,1,5);
-disp(first);
+    disp(first);
+    cout<<"\n";
+    swapl2l();
+    disp(first);
+    cout<<"\n";
+    swapMN(first,1,5);
+    disp(first);
 
 }
