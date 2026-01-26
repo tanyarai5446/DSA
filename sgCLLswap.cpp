@@ -109,7 +109,8 @@ void swapMN(node*head,int m,int n)
         currN->next=currM;
     }
     //default case
-    else{
+    else
+    {
         if(prevM)prevM->next=currN;
         if(prevN)prevN->next=currM;
         temp=currM->next;
