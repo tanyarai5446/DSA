@@ -56,9 +56,9 @@ int main()
     {
         addnode();
     }
-  cout<<"\n";
-  disp(first);
-  cout<<"\n";
-  reverse();
-  disp(first);
+    cout<<"\n";
+    disp(first);
+    cout<<"\n";
+    reverse();
+    disp(first);
 }
