@@ -50,7 +50,8 @@ void del_before_given(int y) {
     temp = first;
     bool found = false;
     do {
-        if (temp->next->data == y) {
+        if (temp->next->data == y) 
+        {
             found = true;
             break;
         }
