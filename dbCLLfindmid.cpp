@@ -7,7 +7,6 @@ struct node
 {
     int data;
     node*prev,*next;
-
 };
 node *first,*temp,*ttemp,*p;
 void addnode()
