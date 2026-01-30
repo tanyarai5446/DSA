@@ -49,7 +49,6 @@ void disp()
         temp=temp->next;
     }while(temp!=first);
 }
-
 int main()
 {
     first=temp=ttemp=nullptr;
