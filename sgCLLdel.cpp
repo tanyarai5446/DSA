@@ -52,7 +52,8 @@ void delanyMth(int m)
   int count=1;
   bool found=false;
   while(count<m&&temp->next!=first)
-  { ttemp=temp;
+  { 
+    ttemp=temp;
     temp=temp->next;
     count++;
   }
