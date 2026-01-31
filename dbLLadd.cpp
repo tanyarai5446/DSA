@@ -24,19 +24,15 @@ void addnode()
 
 void add_before_first()
 {
-
- p=new node;
-
- cin>>p->data;
-
- p->next=first;
+  p=new node;
+  cin>>p->data;
+  p->next=first;
 
  p->prev=null;
 
  first->prev=p;
 
  first=p;
-
 
 }
 
