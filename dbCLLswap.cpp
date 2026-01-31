@@ -22,7 +22,6 @@ void addnode()
        first->prev=ttemp;
     }
     temp=ttemp;
-
 }
 void swapFS()
 {
