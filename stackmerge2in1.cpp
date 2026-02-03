@@ -37,7 +37,8 @@ struct Stack {
     }
 };
 // Merge two stacks into third alternately
-void mergeAlternately(Stack& s1, Stack& s2, Stack& s3) {
+void mergeAlternately(Stack& s1, Stack& s2, Stack& s3) 
+{
     while (!s1.isEmpty() || !s2.isEmpty()) {
         if (!s1.isEmpty()) s3.push(s1.pop());
         if (!s2.isEmpty()) s3.push(s2.pop());
