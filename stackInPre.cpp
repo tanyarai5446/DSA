@@ -8,7 +8,8 @@ struct opr
     char *data;
     int top, size;
 
-    void init(int n) {
+    void init(int n) 
+    {
         size = n;
         data = new char[size];
         top = -1;
