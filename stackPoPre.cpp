@@ -39,7 +39,6 @@ int presi(char c)
    default :return 0;
    }
 }
-
 int getlength(char s[])
 {
 int i=0;
