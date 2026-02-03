@@ -7,7 +7,7 @@ using namespace std;
 struct inpo
 {
   std::string *data;
-  int top,size;
+   int top,size;
    void init(int n)
    {
    size=n;
