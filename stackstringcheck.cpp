@@ -31,9 +31,11 @@ void nonalphacheck(stack &s1)
     while(s1.top!=-1)
    { 
     char c=s1.pop();
-    if(isnotalpha(c)){
+    if(isnotalpha(c))
+    {
     cout<<"Non-alphabetical character found: '" << c << "'\n";
-    found = true;}
+    found = true;
+    }
    }
    if(!found)
    cout<<"all characters are alphabetical";
